@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" > 
+<RelativeLayout
+    android:id="@+id/imcc_chatLayout"
+    
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF" >
+   
+    <TextView
+        android:id="@+id/imcc_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        />
+   <!-- 程序主界面 -->
+	<RelativeLayout
+	android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF" >
+
+    <!-- 标题栏 -->
+
+    <RelativeLayout
+        android:id="@+id/imcc_rl_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/imcc_title_bar"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="4dp"
+            android:src="@drawable/imcc_ic_launcher" />
+
+        <Button
+            android:id="@+id/imcc_btn_closeChat"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:paddingRight="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/imcc_drawable_shap"
+            android:onClick="chat_back"
+            android:text="关闭对话"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+    </RelativeLayout>
+    
+    <!-- 网络连接不可以用提示层 -->
+     <RelativeLayout
+        android:id="@+id/imcc_networkerr_layout"
+        android:layout_below="@+id/imcc_rl_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="#FFF0F5"
+        android:visibility="gone"
+        android:gravity="center_vertical" >
+        <ImageView
+            android:id="@+id/imcc_img_sendfail"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/imcc_network_unavailable"
+            android:focusable="false" />
+        <TextView
+            android:id="@+id/imcc_tv_networkerr"
+            android:layout_toRightOf="@+id/imcc_img_sendfail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:paddingLeft="4dp"
+            android:text="网络连接不可用"
+            android:textColor="#000000"
+            android:textSize="12sp" />
+
+       
+    </RelativeLayout>
+
+    
+  
+    <!-- 底部按钮以及 编辑框 -->
+    <RelativeLayout
+        android:id="@+id/imcc_rl_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/imcc_title_bar" >
+
+        <LinearLayout
+            android:id="@+id/imcc_btn_bottom"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/imcc_emotionPopUp"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginLeft="4dp"
+                android:src="@drawable/imcc_emotionfocus" />
+
+            <ImageView
+                android:id="@+id/imcc_picPopUp"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:src="@drawable/imcc_more" />
+
+            <RelativeLayout
+                android:id="@+id/imcc_messagebtn"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <EditText
+                    android:id="@+id/imcc_et_sendmessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:background="@drawable/imcc_edittext_shap"
+                    android:paddingLeft="10dp"
+                    android:singleLine="false"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/imcc_btn_rcd"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="4dp"
+                    android:background="@drawable/imcc_circle_line_shap"
+                    android:singleLine="true"
+                    android:text="按住录音"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/imcc_send_layer"
+                android:layout_width="60dp"
+                android:layout_height="38dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:gravity="center_vertical" >
+
+                <Button
+                    android:id="@+id/imcc_btn_send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:background="@drawable/imcc_drawable_shap"
+                    android:textColor="#FFFFFF"
+                    android:clickable="true"
+                    android:text="发送"
+                    android:textSize="20sp"
+                   
+                    />
+
+                <ImageButton
+                    android:id="@+id/imcc_imagebtn_speech"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/imcc_speech"
+                     android:visibility="gone"
+                    android:clickable="true" />
+            </RelativeLayout>
+        </LinearLayout>
+      <!-- 显示图片层 -->
+        <RelativeLayout
+            android:id="@+id/imcc_piclayer"
+            android:layout_width="fill_parent"
+            android:layout_height="75dp"
+            android:layout_below="@+id/imcc_btn_bottom"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/imcc_takePic"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/imcc_camera"
+                android:clickable="true" />
+
+            <ImageView
+                android:id="@+id/imcc_choosePic"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/imcc_takePic"
+                android:background="@drawable/imcc_pic"
+                android:clickable="true" />
+        </RelativeLayout>
+        
+                 <!-- 显示表情层 -->
+        <RelativeLayout
+            android:id="@+id/imcc_emotionlayer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imcc_btn_bottom"
+            android:background="#fff0f0f0"
+        	android:orientation="vertical"
+        	android:paddingBottom="5dip"
+        	android:paddingTop="5dip"
+        	android:visibility="gone"
+        	 >
+        
+           <android.support.v4.view.ViewPager
+	        android:id="@+id/imcc_face_pager"
+            android:layout_width="fill_parent"
+            android:layout_height="80.0dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:background="#fff0f0f0"
+            android:flipInterval="30"
+            android:persistentDrawingCache="animation">
+	        </android.support.v4.view.ViewPager>
+	        
+	        <com.imcc.adapter.CirclePageIndicator
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_below="@+id/imcc_face_pager"
+            android:id="@+id/imcc_indicator"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dip" />
+	        
+        </RelativeLayout>
+         
+    </RelativeLayout>
+
+    <!-- 聊天内容 listview -->
+
+    <ListView
+        android:id="@+id/imcc_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/imcc_rl_bottom"
+        android:layout_below="@id/imcc_networkerr_layout"
+        android:cacheColorHint="#0000"
+        android:divider="@null"
+        android:dividerHeight="5dp"
+        android:scrollbarStyle="outsideOverlay"
+        android:transcriptMode="normal"
+        
+         />
+ </RelativeLayout>
+ 	
+  	 <!-- 欢迎界面 -->
+	  <RelativeLayout
+	    android:id="@+id/imcc_welcome_layer"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:gravity="center_horizontal"
+	    android:orientation="vertical"
+	    android:background="@drawable/imcc_tabg"
+	    android:alpha="50">
+    
+	    <RelativeLayout 
+	        android:id="@+id/imcc_welcome_item"
+	        android:layout_width="fill_parent"
+	        android:layout_height="55dp"
+	        android:layout_marginTop="100dp"
+	        android:gravity="center"
+	        android:layout_marginLeft="15dp"
+	        android:layout_marginRight="15dp"
+	        android:background="#FFFFFF">
+        
+        <ImageView
+            android:id="@+id/imcc_welcome_emotion"
+            android:layout_width="30dp"
+            android:layout_height="38dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/imcc_welcome" />
+       
+        <TextView
+            android:id="@+id/imcc_welcome_text"
+            android:layout_toRightOf="@id/imcc_welcome_emotion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_centerVertical="true"
+            android:text="欢迎使用IMCC在线客服平台"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000000" />
+        
+        <LinearLayout android:layout_width="match_parent"
+             android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_height="50dp">
+            <com.ant.liao.GifView
+            android:id="@+id/imcc_gif1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"        
+            android:enabled="false"
+            android:scaleX="4"
+            android:scaleY="4"
+            android:gravity="center"
+            />
+         
+        </LinearLayout>
+
+        
+    </RelativeLayout>
+
+   </RelativeLayout>
+   
+</RelativeLayout>
+
+   <RelativeLayout
+        android:id="@+id/imcc_loading_layout"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        
+        android:alpha="0.6"
+        android:background="#808080"
+       
+        android:focusable="true" 
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal">
+
+       <Button
+           android:layout_width="match_parent"
+           android:layout_height="50dp"
+           android:layout_alignParentBottom="true"
+           android:layout_alignParentLeft="true"
+           android:background="@null" />
+
+    </RelativeLayout>
+</FrameLayout>

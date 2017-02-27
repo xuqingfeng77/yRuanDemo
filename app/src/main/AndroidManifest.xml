@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.eeepay.yruan">
+
+
+    <!-- imcc webchat added  start -->
+    <!-- record权限 -->
+
+    <!-- 申请允许挂载和反挂载SD卡权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 申请SD的文件读写权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 申请使用设备摄像头权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 申请使用设备录音权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 申请程序访问有关GSM网络信息权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 申请读写手机状态和身份权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- 申请设备震动权限 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- imcc webchat added  end -->
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.example.testa.TestColor">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- imcc webchat added  start -->
+        <activity
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"
+            android:name="com.imcc.contactActivity.WebChatActivity" >
+        </activity>
+        <activity
+            android:theme="@style/imcc_Dialog_Fullscreen"
+            android:name="com.imcc.contactActivity.ShowPicActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- imcc webchat added  end -->
+    </application>
+
+</manifest>

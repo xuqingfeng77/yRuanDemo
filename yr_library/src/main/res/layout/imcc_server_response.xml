@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+        <TextView
+            android:id="@+id/imcc_tv_sendtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:padding="2dp"
+            android:textColor="#ffffff"
+            android:textSize="12sp"
+            android:background="#bfbfbf"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp" >
+
+        <ImageView
+            android:id="@+id/imcc_iv_userhead"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/imcc_server_online"
+            android:baselineAlignBottom="false"
+            />
+         <ImageView
+             android:id="@+id/imcc_send_fail"
+             android:layout_width="30dp"
+             android:layout_height="30dp"
+             android:layout_alignParentRight="true"
+             android:layout_centerVertical="true"
+             android:layout_marginRight="51dp" />
+        <RelativeLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerVertical="true"
+             android:layout_marginLeft="5dp"
+             android:layout_toRightOf="@+id/imcc_iv_userhead" >
+
+             <TextView
+                 android:id="@+id/imcc_tv_chatcontent"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_centerInParent="true"
+                 android:background="@drawable/imcc_balloon_l"
+                 android:padding="5dp"
+                 android:textColor="#ff000000"
+                 android:textSize="14sp" />
+
+            
+
+                 <ProgressBar
+                     android:id="@+id/imcc_load_progressBar"
+                     style="?android:attr/progressBarStyleLarge"
+                     android:layout_centerInParent="true"
+                     android:gravity="center"
+                     android:visibility="gone"
+                     android:layout_width="30dp"
+                     android:layout_height="30dp" />
+            
+         </RelativeLayout>
+  
+        
+    </RelativeLayout>
+</LinearLayout>

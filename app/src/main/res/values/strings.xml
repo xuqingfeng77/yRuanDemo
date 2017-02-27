@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, SoftTestActivity!</string>
+    <string name="app_name">SoftTest</string>
+    <string name="version_info">组件版本: %1$s</string>
+    
+
+    
+</resources>

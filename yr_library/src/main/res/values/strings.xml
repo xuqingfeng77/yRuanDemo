@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, SoftTestActivity!</string>
+    <string name="app_name">SoftTest</string>
+    <string name="version_info">组件版本: %1$s</string>
+    
+    <!-- UGo string-->
+    <string name="ugo_server">服务器:</string>
+    <string name="ugo_myphone">本机号:</string>
+    <string name="ugo_uid_hint">请输入用户名</string>
+    <string name="ugo_passwd">密码:</string>
+    <string name="ugo_passwd_hint">请输入密码</string>
+    <string name="ugo_nickname">昵称:</string>
+    <string name="ugo_nickname_hint">请输入昵称</string>
+    <string name="ugo_sessionid">会话ID:</string>
+    <string name="ugo_call_status">呼叫状态: %1$s</string>
+    <string name="ugo_call_status_register_success">注册成功</string>
+    <string name="ugo_call_status_unregister_success">注销成功</string>
+    <string name="ugo_call_status_calling">正在呼叫</string>
+    <string name="ugo_call_status_conf_calling">正在会议呼叫</string>
+    <string name="ugo_call_status_conf_adding">正在增加会议呼叫</string>
+    <string name="ugo_network_status">连接状态: %1$s</string>
+    <string name="ugo_connect">连接</string>
+    <string name="ugo_register">注册</string>
+    <string name="ugo_unregister">注销</string>
+    <string name="ugo_called_phone">被叫号码:</string>
+    <string name="ugo_called_phone_hint">请输入被叫号码</string>
+    <string name="ugo_called_uid">被叫uid:</string>
+    <string name="ugo_called_uid_hint">请输入被叫uid</string>
+
+    <!--TGo string-->
+    <string name="tgo_server_title">服务器:</string>
+    <string name="tgo_server_hint">请输入服务器地址</string>
+    <string name="tgo_uid_title">用户名:</string>
+    <string name="tgo_uid_hint">请输入用户名</string>
+    <string name="tgo_passwd_title">密码:</string>
+    <string name="tgo_passwd_hint">请输入密码</string>
+    <string name="tgo_nickname_title">显示名:</string>
+    <string name="tgo_nickname_hint">请输入显示名</string>
+    <string name="tgo_call_status">状态: %1$s</string>
+    <string name="tgo_register">注册</string>
+    <string name="tgo_unregister">注销</string>
+    <string name="tgo_called_phone_title">被叫号码:</string>
+    <string name="tgo_called_phone_hint">请输入被叫号码</string>
+
+    <!-- VoGo string -->
+    <string name="vogo_call_status">呼叫状态: %1$s</string>
+    <string name="vogo_local_ip_info">local IP: </string>
+    <string name="vogo_network_status">连接状态: %1$s</string>
+    <string name="vogo_called_ip_title">被叫IP:</string>
+    <string name="vogo_called_ip_hint">请输入被叫IP</string>
+    <string name="vogo_called_port_title">被叫端口:</string>
+    <string name="vogo_called_port_hint">请输入被叫端口</string>
+    <string name="vogo_local_port_title">本地端口</string>
+    <string name="vogo_local_port_hint">请输入本地端口</string>
+
+    <!--common string-->
+    <string name="user_action_audio_call">呼叫</string>
+    <string name="user_action_hangup">挂掉/拒接</string>
+    <string name="user_action_answer">接听</string>
+    <string name="user_action_conf_add">增加会议人数</string>
+    <string name="user_action_conf_call">会议呼叫</string>
+    <string name="user_action_video_call">视频呼叫</string>
+    <string name="user_action_mute_on">静音</string>
+    <string name="user_action_mute_off">不静音</string>
+    <string name="user_action_speaker_on">免提</string>
+    <string name="user_action_speaker_off">不免提</string>
+    <string name="user_action_camera_switch">切换摄像头</string>
+    <string name="vqe_aec_on">aec on</string>
+    <string name="vqe_aec_off">aec off</string>
+    <string name="vqe_agc_on">agc on</string>
+    <string name="vqe_agc_off">agc off</string>
+    <string name="vqe_ns_on">ns on</string>
+    <string name="vqe_ns_off">ns off</string>
+    <string name="vqe_fec_on">fec on</string>
+    <string name="vqe_fec_off">fec off</string>
+    <string name="vqe_wb_on">WB on</string>
+    <string name="vqe_wb_off">WB off</string>
+    <string name="vqe_prtp_on">prtp on</string>
+    <string name="vqe_prtp_off">prtp off</string>
+    <string name="vqe_rx_agc_on">rxAgc on</string>
+    <string name="vqe_rx_agc_off">rxAgc off</string>
+    <string name="vqe_rxns_on">rxNs on</string>
+    <string name="vqe_rxns_off">rxNs off</string>
+    <string name="record_on">record on</string>
+    <string name="record_off">record off</string>
+    <string name="numpad_0">0</string>
+    <string name="numpad_1">1</string>
+    <string name="numpad_2">2</string>
+    <string name="numpad_3">3</string>
+    <string name="numpad_4">4</string>
+    <string name="numpad_5">5</string>
+    <string name="numpad_6">6</string>
+    <string name="numpad_7">7</string>
+    <string name="numpad_8">8</string>
+    <string name="numpad_9">9</string>
+    <string name="numpad_star">*</string>
+    <string name="numpad_sharp">#</string>
+    <string name="vogo_pt_value_title">PT:</string>
+    <string name="vogo_pt_value_hint">18-G.729 106-silk 107-amr 50-silkwb</string>
+    
+</resources>

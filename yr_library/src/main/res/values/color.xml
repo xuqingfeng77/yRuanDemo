@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <color name="imcc_green">#32CD32</color>
+   <color name="imcc_white">#FFFFFF</color>
+   <color name="imcc_dark">#000000</color>
+   <color name="imcc_thirty_transparent_black">#4d000000</color> 
+</resources>
