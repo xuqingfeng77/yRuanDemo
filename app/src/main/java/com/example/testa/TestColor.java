@@ -1,6 +1,7 @@
 package com.example.testa;
 
 import com.imcc.contactActivity.WebChatActivity;
+import com.imcc.utils.SPUtil;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -25,6 +26,7 @@ public class TestColor extends Activity {
 			@Override
 			public void onClick(View v) {
 //				CustomerManager.createSmallWindow(TestColor.this);
+				SPUtil.putString(TestColor.this,"package","cn.eeepay.yruan");//cn.eeepay.yruan是AndroidManifest.xml中的package
 				Intent it = new Intent(TestColor.this,WebChatActivity.class);
 				it.putExtra("imcc-cust-im-number", "1000@96729823082");//这些数据是假的
 				it.putExtra("imcc-host-im-number", "QYeeYw");//这些数据是假的
